@@ -36,12 +36,12 @@ app.put('/change/:userId',controllers.changeData);
 
 app.use('/home',(req,res)=>res.json({"msg":"Home"}))
 
-if(process.env.NODE_ENV==="production"){    
-    app.use(express.static('prep/build'))
-    app.get('*',(req, res)=>{
-        res.sendFile(path.resolve(__dirname,'prep','build','index.html'))
-    })
-}
+
+
+app.use(express.static('prep/build'))
+app.get('*',(req, res)=>{
+    res.sendFile(path.resolve(__dirname,'prep','build','index.html'))
+})
 
 app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
