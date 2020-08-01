@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client":"npm start --prefix prep",
     "dev":"concurrently \"node server.js\" \"npm run client  \"",
-    "heroku-postbuild":"npm install --prefix prep && npm run build --prefix prep"
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix prep && npm run build --prefix prep"
   },
   "author": "",
   "license": "ISC",
