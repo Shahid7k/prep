@@ -34,7 +34,7 @@ app.put('/change/:userId',controllers.changeData);
 // app.use('/', userRoutes);
 // app.use('/', quesRoutes);
 
-app.use('/home',(req,res)=>res.json({"msg":"Home"}))
+app.use('/',(req,res)=>res.json({"msg":"Home"}))
 
 
 
