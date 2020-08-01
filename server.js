@@ -34,12 +34,12 @@ app.put('/change/:userId',controllers.changeData);
 // app.use('/', userRoutes);
 // app.use('/', quesRoutes);
 
-app.use('/',(req,res)=>res.json({"msg":"Home"}))
+// app.use('/',(req,res)=>res.json({"msg":"Home"}))
 
 
 
 app.use(express.static('prep/build'))
-app.get('*',(req, res)=>{
+app.get('/',(req, res)=>{
     res.sendFile(path.resolve(__dirname,'prep','build','index.html'))
 })
 
