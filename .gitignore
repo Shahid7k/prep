@@ -10,7 +10,7 @@
 /coverage
 
 # production
-/prep/build
+# /prep/build
 /prep/node_modules
 
 # misc
